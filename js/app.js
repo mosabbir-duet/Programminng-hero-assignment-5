@@ -1,4 +1,4 @@
-// This randomColorChange function work for generating random color for each card using mousemove event
+// This randomColorChange function work for generating random color for each card using mouseenter event
 
 let serial = 0;
 
@@ -176,29 +176,29 @@ document.getElementById('btn-ellipse-calc').addEventListener('click', () => {
     
  })
 
-// mousemove event 
+// mouseenter event 
 
-document.getElementById('triangle-ranColorChange').addEventListener('mousemove', () => {
+document.getElementById('triangle-ranColorChange').addEventListener('mouseenter', () => {
     randomColorChange('triangle-ranColorChange');
  })
 
-document.getElementById('rectangle-ranColorChange').addEventListener('mousemove', () => {
+document.getElementById('rectangle-ranColorChange').addEventListener('mouseenter', () => {
     randomColorChange('rectangle-ranColorChange')
  })
 
-document.getElementById('parallelogram-ranColorChange').addEventListener('mousemove', () => {
+document.getElementById('parallelogram-ranColorChange').addEventListener('mouseenter', () => {
     randomColorChange('parallelogram-ranColorChange')
  })
 
-document.getElementById('rhombus-ranColorChange').addEventListener('mousemove', () => {
+document.getElementById('rhombus-ranColorChange').addEventListener('mouseenter', () => {
     randomColorChange('rhombus-ranColorChange')
  })
 
-document.getElementById('pentagon-ranColorChange').addEventListener('mousemove', () => {
+document.getElementById('pentagon-ranColorChange').addEventListener('mouseenter', () => {
     randomColorChange('pentagon-ranColorChange')
  })
 
-document.getElementById('ellipse-ranColorChange').addEventListener('mousemove', () => {
+document.getElementById('ellipse-ranColorChange').addEventListener('mouseenter', () => {
     randomColorChange('ellipse-ranColorChange')
  })
 
