@@ -12,9 +12,14 @@ function randomColorChange(cardId) {
 // This function calculate area of different geometry shape 
 
 function calculationArea(geometryShapeId, firstInputFieldId, secondInputFieldId) {
+    // call takeInput function for taking value from input field
     let firstInputValue = takeInput(firstInputFieldId);
-    let secondInputValue = takeInput(secondInputFieldId);
-    
+    let secondInputValue =  takeInput(secondInputFieldId);
+
+// call checkValidateInputValue function for checking tha validation
+
+    const checkValidation = checkValidationInputValue(firstInputValue, secondInputValue);
+    // console.log(checkValidation);
 }
 
 function takeInput(InputFieldId) {
@@ -23,6 +28,31 @@ function takeInput(InputFieldId) {
     InputField.value = "";
     return InputFieldValue;
 }
+
+function checkValidationInputValue(firstInputValue, secondInputValue) {
+
+    if((firstInputValue.length == 0 && secondInputValue.length == 0)) {
+        alert("Each field is empty!!! please give value in each field");
+        return false;
+    }
+
+    else if((firstInputValue.length == 0 && typeof secondInputValue.length != 0) || (secondInputValue.length == 0 && typeof firstInputValue.length != 0) ){
+        alert("one field empty!!! please give value in each field");
+        return false;
+    }
+
+    else if((isNaN(firstInputValue) && secondInputValue.length != 0) || (isNaN(secondInputValue) && typeof firstInputValue.length != 0) ) {
+        alert("one field value is string!!!");
+        return false;
+    }
+
+    
+    
+    else {
+        return true
+    }
+}
+
 
 
 // click event 
