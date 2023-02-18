@@ -20,6 +20,32 @@ function calculationArea(geometryShapeId, firstInputFieldId, secondInputFieldId)
 
     const checkValidation = checkValidationInputValue(firstInputValue, secondInputValue);
     // console.log(checkValidation);
+
+
+    if(checkValidation) {
+        firstInputValue = parseFloat(firstInputValue);
+        secondInputValue = parseFloat(secondInputValue);
+
+        if(geometryShapeId == 'btn-traingle-calc') {
+            const area = 0.5 * firstInputValue * secondInputValue;
+           
+            
+            console.log(area.toFixed(2));
+        }
+
+        else if( geometryShapeId == 'btn-rectangle-calc') {
+            const area = firstInputValue * secondInputValue;
+            console.log(area.toFixed(2));
+        }
+
+        else if( geometryShapeId == 'btn-rectangle-calc') {
+            const area = firstInputValue * secondInputValue;
+            console.log(area.toFixed(2));
+        }
+    }
+    else {
+        return;
+    }
 }
 
 function takeInput(InputFieldId) {
@@ -59,26 +85,30 @@ function checkValidationInputValue(firstInputValue, secondInputValue) {
 
 
 document.getElementById('btn-traingle-calc').addEventListener('click', () => {
-    calculationArea('btn-traingle-calc', 'tringle-first-field', 'tringle-second-field')
+    calculationArea('btn-traingle-calc', 'tringle-first-field', 'tringle-second-field');
  })
 
 document.getElementById('btn-rectangle-calc').addEventListener('click', () => {
-    randomColorChange('rectangle-ranColorChange')
+    calculationArea('btn-rectangle-calc', 'rectangle-first-field', 'rectangle-second-field');
  })
 
 document.getElementById('btn-parallelogram-calc').addEventListener('click', () => {
-    randomColorChange('parallelogram-ranColorChange')
+    calculationArea('btn-parallelogram-calc', 'parallelogram-first-field', 'parallelogram-second-field');
  })
 
 document.getElementById('btn-rhombus-calc').addEventListener('click', () => {
+    calculationArea('btn-rhombus-calc', 'rhombus-first-field', 'rhombus-second-field');
     
  })
 
 document.getElementById('btn-pentagon-calc').addEventListener('click', () => {
-    
+    calculationArea('btn-pentagon-calc', 'pentagon-first-field', 'pentagon-second-field');
+
  })
 
 document.getElementById('btn-ellipse-calc').addEventListener('click', () => {
+
+    calculationArea('btn-ellipse-calc', 'ellipse-first-field', 'ellipse-second-field');
     
  })
 
