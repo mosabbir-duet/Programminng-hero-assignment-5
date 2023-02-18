@@ -57,3 +57,33 @@
     margin: 10px auto;
   }
 }
+
+form input {
+  width: 60px;
+  border: 0;
+  background-color: #d9d7d7;
+  color: #000;
+  border-radius: 5px;
+  padding: 3px;
+  margin: 15px 0;
+}
+.card img {
+  width: 100%;
+  min-height: 275px;
+  height: auto;
+  background-size: cover;
+}
+
+.btn-override {
+  display: block;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #1090d8;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+}

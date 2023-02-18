@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="style.css" />
     <title>Geometry Genius</title>
   </head>
-  <body>
+  <body class="container-fluid">
     <header>
       <div class="header-section d-sm-flex justify-content-between">
         <div class="header-title">
@@ -23,5 +23,192 @@
         <div class="button-area"><button class="btn-blog">Blog</button></div>
       </div>
     </header>
+
+    <main class="m-4">
+      <div class="row">
+        <div class="col-lg-9">
+          <div class="row row-cols-1 row-cols-md-3">
+            <div class="col mb-3">
+              <div class="card p-3" id="triangle-ranColorChange">
+                <img
+                  src="./images/triangle.png"
+                  alt=""
+                  class="mb-3 w-auto p-5 img-fluid"
+                />
+                <div class="card-body p-0">
+                  <center>
+                    <h3 class="m-0">Tringle</h3>
+                    <span>Area (A) = 0.5*b*h</span>
+                    <form action="">
+                      <input type="text" placeholder="b" id="base-text" />
+                      <span class="mx-1">cm</span>
+                      <input
+                        type="text"
+                        placeholder="h"
+                        id="height-text"
+                      /><span class="mx-1">cm</span>
+                    </form>
+                  </center>
+                  <button class="btn-override" id="btn-traingle-calc">
+                    Calculate
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col mb-3">
+              <div class="card p-3" id="rectangle-ranColorChange">
+                <img
+                  src="./images/rectangle.png"
+                  alt=""
+                  class="mb-3 w-auto p-5 img-fluid"
+                />
+                <div class="card-body p-0">
+                  <center>
+                    <h3 class="m-0">Rectangle</h3>
+                    <span>Area (A) = w*l</span>
+                    <form action="">
+                      <input type="text" placeholder="w" id="base-text" />
+                      <span class="mx-1">cm</span>
+                      <input
+                        type="text"
+                        placeholder="l"
+                        id="height-text"
+                      /><span class="mx-1">cm</span>
+                    </form>
+                  </center>
+                  <button class="btn-override" id="btn-rectangle-calc">
+                    Calculate
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col mb-3">
+              <div class="card p-3" id="parallelogram-ranColorChange">
+                <img
+                  src="./images/parallelogram.png"
+                  alt=""
+                  class="mb-3 w-auto p-5 img-fluid"
+                />
+                <div class="card-body p-0">
+                  <center>
+                    <h3 class="m-0">Parallelogram</h3>
+                    <span>Area (A) = b*h</span>
+                    <form action="">
+                      <input type="text" placeholder="b" id="base-text" />
+                      <span class="mx-1">cm</span>
+                      <input
+                        type="text"
+                        placeholder="h"
+                        id="height-text"
+                      /><span class="mx-1">cm</span>
+                    </form>
+                  </center>
+                  <button class="btn-override" id="btn-parallelogram-calc">
+                    Calculate
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col mb-3">
+              <div class="card p-3" id="rhombus-ranColorChange">
+                <img
+                  src="./images/rhombus.png"
+                  alt=""
+                  class="mb-3 w-auto p-5 img-fluid"
+                />
+                <div class="card-body p-0">
+                  <center>
+                    <h3 class="m-0">Rhombus</h3>
+                    <span>Area (A) = 0.5*d1*d2</span>
+                    <form action="">
+                      <input type="text" placeholder="d1" id="base-text" />
+                      <span class="mx-1">cm</span>
+                      <input
+                        type="text"
+                        placeholder="d2"
+                        id="height-text"
+                      /><span class="mx-1">cm</span>
+                    </form>
+                  </center>
+                  <button class="btn-override" id="btn-rhombus-calc">
+                    Calculate
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col mb-3">
+              <div class="card p-3" id="pentagon-ranColorChange">
+                <img
+                  src="./images/pentagon.png"
+                  alt=""
+                  class="mb-3 w-auto p-5 img-fluid"
+                />
+                <div class="card-body p-0">
+                  <center>
+                    <h3 class="m-0">Pentagon</h3>
+                    <span>Area (A) = 0.5*p*b</span>
+                    <form action="">
+                      <input type="text" placeholder="p" id="base-text" />
+                      <span class="mx-1">cm</span>
+                      <input
+                        type="text"
+                        placeholder="b"
+                        id="height-text"
+                      /><span class="mx-1">cm</span>
+                    </form>
+                  </center>
+                  <button class="btn-override" id="btn-pentagon-calc">
+                    Calculate
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col mb-3">
+              <div class="card p-3" id="ellipse-ranColorChange">
+                <img
+                  src="./images/ellipse.png"
+                  alt=""
+                  class="mb-3 w-auto p-5 img-fluid"
+                />
+                <div class="card-body p-0">
+                  <center>
+                    <h3 class="m-0">Ellipse</h3>
+                    <span>Area (A) = <span>&#8508;</span>ab</span>
+                    <form action="">
+                      <input type="text" placeholder="a" id="base-text" />
+                      <span class="mx-1">cm</span>
+                      <input
+                        type="text"
+                        placeholder="b"
+                        id="height-text"
+                      /><span class="mx-1">cm</span>
+                    </form>
+                  </center>
+                  <button class="btn-override" id="btn-ellipse-calc">
+                    Calculate
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-5 col-lg-3">
+          <div class="col mb-3">
+            <div class="border rounded" style="height: 320px">
+              <h4 class="text-center my-3" style="text-decoration: underline">
+                Area Calculation
+                <div class="">
+                  <p class="d-inline text-start">ji</p>
+                  <span class="">hello</span>
+                  <button>btn</button>
+                </div>
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./js/app.js"></script>
   </body>
 </html>
