@@ -1,4 +1,7 @@
 // This randomColorChange function work for generating random color for each card using mousemove event
+
+let serial = 0;
+
 function randomColorChange(cardId) {
 
     var r = Math.floor(Math.random() * (255 - 0) + 0);
@@ -21,32 +24,68 @@ function calculationArea(geometryShapeId, firstInputFieldId, secondInputFieldId)
     const checkValidation = checkValidationInputValue(firstInputValue, secondInputValue);
     // console.log(checkValidation);
 
+    // If validation return true for then if portion work and calculate area for each geometry shape
 
     if(checkValidation) {
+
         firstInputValue = parseFloat(firstInputValue);
         secondInputValue = parseFloat(secondInputValue);
 
         if(geometryShapeId == 'btn-traingle-calc') {
-            const area = 0.5 * firstInputValue * secondInputValue;
-           
+            const geometryShapeName = 'Traingle';
+            let area = 0.5 * firstInputValue * secondInputValue;
+            area = area.toFixed(2);
+            printAreaValue(geometryShapeName,area);
+
+        }
+
+        else if( geometryShapeId == 'btn-rectangle-calc') {
+            const geometryShapeName = 'Rectangle';
+            let area = firstInputValue * secondInputValue;
+            area = area.toFixed(2);
+            printAreaValue(geometryShapeName,area);
             
-            console.log(area.toFixed(2));
         }
 
-        else if( geometryShapeId == 'btn-rectangle-calc') {
-            const area = firstInputValue * secondInputValue;
-            console.log(area.toFixed(2));
+        else if( geometryShapeId == 'btn-parallelogram-calc') {
+            const geometryShapeName = 'Parallelogram';
+            let area = firstInputValue * secondInputValue;
+            area = area.toFixed(2);
+            printAreaValue(geometryShapeName,area);
         }
 
-        else if( geometryShapeId == 'btn-rectangle-calc') {
-            const area = firstInputValue * secondInputValue;
-            console.log(area.toFixed(2));
+        else if( geometryShapeId == 'btn-rhombus-calc') {
+            const geometryShapeName = 'Rhombus';
+            let area = 0.5 * firstInputValue * secondInputValue;
+            area = area.toFixed(2);
+            printAreaValue(geometryShapeName,area);
         }
+
+        else if( geometryShapeId == 'btn-pentagon-calc') {
+            const geometryShapeName = 'Pentagon';
+            let area = 0.5 * firstInputValue * secondInputValue;
+            area = area.toFixed(2);
+            printAreaValue(geometryShapeName,area);
+        }
+
+        else if( geometryShapeId == 'btn-ellipse-calc') {
+            const geometryShapeName = 'Ellipse';
+            const pi = 3.14;
+            let area = pi *  firstInputValue * secondInputValue;
+            area = area.toFixed(2);
+            printAreaValue(geometryShapeName,area);
+        }
+
+    // validation function return false then execute else statement and don't calculate area of geometry shape 
+
     }
     else {
         return;
     }
 }
+
+
+// This Function take input value from form field
 
 function takeInput(InputFieldId) {
     const InputField= document.getElementById(InputFieldId);
@@ -54,6 +93,8 @@ function takeInput(InputFieldId) {
     InputField.value = "";
     return InputFieldValue;
 }
+
+// This Function check the validation of input form data
 
 function checkValidationInputValue(firstInputValue, secondInputValue) {
 
@@ -78,6 +119,24 @@ function checkValidationInputValue(firstInputValue, secondInputValue) {
         return true
     }
 }
+
+
+// This printAreaValue function take the geometry name and area as a parameter and added the table 
+
+function printAreaValue (geometryShapeName, area) {
+    serial += 1;
+    const tableBody = document.getElementById('table-body');
+    const tr = document.createElement('tr');
+    tr.innerHTML = 
+    `<td>${serial}.</td>
+     <td>${geometryShapeName}</td>
+     <td>${area}</td>
+     <td><button class="btn py-auto" style = "background-color:#1090D8">Convert m<sup>2</sup></button></td>
+    `;
+    tableBody.appendChild(tr);
+    
+}
+
 
 
 
