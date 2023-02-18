@@ -113,6 +113,11 @@ function checkValidationInputValue(firstInputValue, secondInputValue) {
         return false;
     }
 
+    else if((firstInputValue < 0 || secondInputValue < 0) ) {
+        alert("You give negative value as a input!!! please provide positive number");
+        return false;
+    }
+
     
     
     else {
