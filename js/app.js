@@ -196,3 +196,10 @@ document.getElementById('pentagon-ranColorChange').addEventListener('mousemove',
 document.getElementById('ellipse-ranColorChange').addEventListener('mousemove', () => {
     randomColorChange('ellipse-ranColorChange')
  })
+
+
+ // blog click event 
+
+ document.getElementById('btn-click-blog').addEventListener('click', () => {
+    window.open("../blog.html");
+ });

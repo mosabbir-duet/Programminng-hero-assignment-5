@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>blog</title>
+  </head>
+  <body class="container">
+    <main class="my-5">
+      <div class="row row-cols-1 row-cols-lg-2">
+        <div class="col mb-5 px-5">
+          <h3>What is DOM and what is the purpose of DOM?</h3>
+          <p style="text-align: justify">
+            The DOM <strong>(Document Object Model)</strong> is an interface
+            that represents how HTML documents are read by the browser. It
+            allows javaScript to manipulate, structure, and style website. After
+            the browser reads HTML document, it creates a representational tree
+            called the Document Object Model and defines how that tree can be
+            accessed. <br />
+            <strong>Purpose of Using DOM: </strong> It’s used to help make
+            website Dynamic without write markup in html. The Document Object
+            Model is significant in speeding up web page loads. It’s used to
+            access the content, structure, and style of a document. It allows to
+            change the content, design, add new element, new innertext, add
+            child, remove child, etc on structure via JavaScript. It's can speed
+            up specific tasks (like dynamically adding an iframe) and decrease
+            load times for pages using it.
+          </p>
+        </div>
+        <div class="col mb-3 px-5">
+          <h3>
+            How will you select HTML elements using DOM? Name the DOM methods.
+          </h3>
+          <strong>
+            HTML can select many ways using DOM(such as by id, by class by tag
+            by selector etc)</strong
+          >
+          <br />
+
+          <ul>
+            <li>getElementByID()</li>
+            <li>getElementsByClass()</li>
+            <li>getElementByTagName()</li>
+            <li>querySelector()</li>
+            <li>querySelectorAll()</li>
+            <li>appendChild()</li>
+            <li>removeChild()</li>
+          </ul>
+        </div>
+        <div class="col mb-3 px-5">
+          <h3>What is event bubble?</h3>
+          <p style="text-align: justify">
+            <strong>Event bubbling</strong> is a way of event propagation in the
+            HTML DOM. It relates to the order in which events are propagated in
+            nested elements. <br />
+            In bubbling, when an event happens, the handler of the innermost
+            element runs, then the parents, and then the further ancestor
+            elements. In other words, events bubble up or propagate the DOM tree
+            upwards.
+          </p>
+          <br />
+          <h2>Example</h2>
+          <h6>
+            Consider the four nested elements: <code>html</code> ,<code
+              >body</code
+            >
+            ,<code>header</code> div, and <code>p</code>.
+          </h6>
+        </div>
+        <div class="col mb-3 px-5">
+          <h3>What is a callback function and why will you use it?</h3>
+          <p style="text-align: justify">
+            A <strong>callback function</strong> in javascript is a function
+            that is passed as an argument in another function. Which is then
+            called inside the parent function to complete a routine or an
+            action. To put it more simply, it is a function that will be
+            called(executed) later after its parent function(the function in
+            which it is passed as an argument) is done executing.
+          </p>
+          <br />
+          <h2>Example</h2>
+          <h6>
+            <code
+              >document.getElementById('btn-ellipse-calc').addEventListener('click',
+              () => { const area = 3.14 * a * b; })</code
+            >
+          </h6>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
