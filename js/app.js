@@ -130,8 +130,8 @@ function printAreaValue (geometryShapeName, area) {
     tr.innerHTML = 
     `<td>${serial}.</td>
      <td>${geometryShapeName}</td>
-     <td>${area}</td>
-     <td><button class="btn py-auto" style = "background-color:#1090D8">Convert m<sup>2</sup></button></td>
+     <td>${area} cm<sup>2</sup></td>
+     <td><button class="btn py-auto" style = "background-color:#1090D8" id = "btn-convert">Convert m<sup>2</sup></button></td>
     `;
     tableBody.appendChild(tr);
     
