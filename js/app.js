@@ -1,5 +1,4 @@
-
-
+// This randomColorChange function work for generating random color for each card using mousemove event
 function randomColorChange(cardId) {
 
     var r = Math.floor(Math.random() * (255 - 0) + 0);
@@ -10,8 +9,53 @@ function randomColorChange(cardId) {
 
 }
 
+// This function calculate area of different geometry shape 
+
+function calculationArea(geometryShapeId, firstInputFieldId, secondInputFieldId) {
+    let firstInputValue = takeInput(firstInputFieldId);
+    let secondInputValue = takeInput(secondInputFieldId);
+    
+}
+
+function takeInput(InputFieldId) {
+    const InputField= document.getElementById(InputFieldId);
+    const InputFieldValue = InputField.value;
+    InputField.value = "";
+    return InputFieldValue;
+}
+
+
+// click event 
+
+
+document.getElementById('btn-traingle-calc').addEventListener('click', () => {
+    calculationArea('btn-traingle-calc', 'tringle-first-field', 'tringle-second-field')
+ })
+
+document.getElementById('btn-rectangle-calc').addEventListener('click', () => {
+    randomColorChange('rectangle-ranColorChange')
+ })
+
+document.getElementById('btn-parallelogram-calc').addEventListener('click', () => {
+    randomColorChange('parallelogram-ranColorChange')
+ })
+
+document.getElementById('btn-rhombus-calc').addEventListener('click', () => {
+    
+ })
+
+document.getElementById('btn-pentagon-calc').addEventListener('click', () => {
+    
+ })
+
+document.getElementById('btn-ellipse-calc').addEventListener('click', () => {
+    
+ })
+
+// mousemove event 
+
 document.getElementById('triangle-ranColorChange').addEventListener('mousemove', () => {
-    randomColorChange('triangle-ranColorChange')
+    randomColorChange('triangle-ranColorChange');
  })
 
 document.getElementById('rectangle-ranColorChange').addEventListener('mousemove', () => {
